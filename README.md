@@ -9,40 +9,26 @@
 
 ## 演習テーマ
 
-- [テーマA](theme_A/theme_A.ipynb)：重みとアクティベーションの量子化感度評価と、効率的な量子化パラメータ設定方法の検討
-- [テーマB](theme_B/theme_B.ipynb)：ニューラルネットワークの重みにおけるベクトル量子化とスカラー量子化の効率比較、および融合手法の検討
-- [テーマC](theme_C/theme_C.ipynb)：量子化の前処理としてのアダマール変換の効果
-- [テーマD](theme_D/theme_D.ipynb)：量子化と多層分解を同時に行う場合の、深さとビット幅の最適比
-- [テーマE](theme_E/theme_E.ipynb)：量子化と枝刈りを同時に行う場合の、ビット幅とスパーシティの最適比
-- [テーマF](theme_F/theme_F.ipynb)：Looped LLMにおける重み量子化ビット幅と、精度・モデルサイズのトレードオフ
-- [テーマG](theme_G/theme_G.ipynb)：Looped LLMの再帰回数と、精度・収束性・計算量の関係
+| テーマ | 内容 | Notebook |
+|---|---|---|
+| A | 重みとアクティベーションの量子化感度評価と、効率的な量子化パラメータ設定方法の検討 | [GitHub](theme_A/theme_A.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_A/theme_A.ipynb) |
+| B | ニューラルネットワークの重みにおけるベクトル量子化とスカラー量子化の効率比較、および融合手法の検討 | [GitHub](theme_B/theme_B.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_B/theme_B.ipynb) |
+| C | 量子化の前処理としてのアダマール変換の効果 | [GitHub](theme_C/theme_C.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_C/theme_C.ipynb) |
+| D | 量子化と多層分解を同時に行う場合の、深さとビット幅の最適比 | [GitHub](theme_D/theme_D.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_D/theme_D.ipynb) |
+| E | 量子化と枝刈りを同時に行う場合の、ビット幅とスパーシティの最適比 | [GitHub](theme_E/theme_E.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_E/theme_E.ipynb) |
+| F | Looped LLMにおける重み量子化ビット幅と、精度・モデルサイズのトレードオフ | [GitHub](theme_F/theme_F.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_F/theme_F.ipynb) |
+| G | Looped LLMの再帰回数と、精度・収束性・計算量の関係 | [GitHub](theme_G/theme_G.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_G/theme_G.ipynb) |
 
-## テーマF・Gについて
+## 演習の進め方
 
-テーマF・Gでは、Looped LLMの [ByteDance/Ouro-1.4B](https://huggingface.co/ByteDance/Ouro-1.4B) を使用します。
+1. 担当テーマのNotebookをGoogle Colabで開く。
+2. Notebook冒頭の指示に従ってランタイムと必要なライブラリを準備する。
+3. 研究上の問いと、実験前の予想を記録する。
+4. 基準条件の結果を確認してから、独立変数を変更する。
+5. 他の条件は可能な限り固定し、結果を表とグラフで比較する。
+6. Notebook末尾の課題に加えて、少なくとも1つの追加実験を行う。
 
-| テーマ | 変更する条件 | 固定する条件 | 主な評価項目 |
-|---|---|---|---|
-| F | 重みビット幅（16/8/6/4/3/2-bit） | 再帰回数4回 | Perplexity、next-token accuracy、理論モデルサイズ、生成文 |
-| G | 再帰回数（1〜8回） | 16-bit重み | Perplexity、next-token accuracy、JS divergence、hidden state変化、生成文 |
-
-テーマFでは量子化ビット幅だけを、テーマGでは再帰回数だけを独立変数として扱います。複数の条件を同時に変えず、結果の原因を区別できる実験計画にしてください。
-
-### Colabで開く
-
-- [テーマFをGoogle Colabで開く](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_F/theme_F.ipynb)
-- [テーマGをGoogle Colabで開く](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_G/theme_G.ipynb)
-
-### 実行環境
-
-- Google Colab
-- GPU：T4
-- モデル：Ouro-1.4B
-- データセット：WikiText-2
-
-Notebookを開いたら、「ランタイム」→「ランタイムのタイプを変更」から **T4 GPU** を選択してください。最初の環境セットアップでパッケージが更新された場合だけ、セッションを一度再起動し、その後Notebookを先頭から実行します。
-
-デフォルトの評価系列数は動作確認用に小さく設定されています。最終結果を作成するときは評価系列数を増やし、同じ傾向が得られるか確認してください。
+Notebookのデフォルト設定は動作確認を目的としています。最終結果を作成するときは評価データ量や試行条件を増やし、同じ傾向が得られるか確認してください。
 
 ## 発表・提出内容
 
@@ -57,4 +43,3 @@ Notebookを開いたら、「ランタイム」→「ランタイムのタイプ
 7. 実験の限界と、次に調べるべき点
 
 最良の結果だけでなく、性能が低下した条件や予想と異なった結果も報告してください。
-
