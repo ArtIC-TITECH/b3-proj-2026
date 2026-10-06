@@ -18,28 +18,3 @@
 | E | 量子化と枝刈りを同時に行う場合の、ビット幅とスパーシティの最適比 | [GitHub](theme_E/theme_E.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_E/theme_E.ipynb) |
 | F | Looped LLMにおける重み量子化ビット幅と、精度・モデルサイズのトレードオフ | [GitHub](theme_F/theme_F.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_F/theme_F.ipynb) |
 | G | Looped LLMの再帰回数と、精度・収束性・計算量の関係 | [GitHub](theme_G/theme_G.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_G/theme_G.ipynb) |
-
-## 演習の進め方
-
-1. 担当テーマのNotebookをGoogle Colabで開く。
-2. Notebook冒頭の指示に従ってランタイムと必要なライブラリを準備する。
-3. 研究上の問いと、実験前の予想を記録する。
-4. 基準条件の結果を確認してから、独立変数を変更する。
-5. 他の条件は可能な限り固定し、結果を表とグラフで比較する。
-6. Notebook末尾の課題に加えて、少なくとも1つの追加実験を行う。
-
-Notebookのデフォルト設定は動作確認を目的としています。最終結果を作成するときは評価データ量や試行条件を増やし、同じ傾向が得られるか確認してください。
-
-## 発表・提出内容
-
-発表資料には、少なくとも以下を含めてください。
-
-1. 研究上の問いと実験前の予想
-2. 独立変数・統制変数・評価指標
-3. 基準条件と各実験条件の結果
-4. 表およびグラフによる比較
-5. 追加実験
-6. 結果に対する考察と結論
-7. 実験の限界と、次に調べるべき点
-
-最良の結果だけでなく、性能が低下した条件や予想と異なった結果も報告してください。
