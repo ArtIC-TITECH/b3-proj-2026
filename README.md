@@ -13,7 +13,6 @@
 |---|---|---|
 | A | 重みとアクティベーションの量子化感度評価と、効率的な量子化パラメータ設定方法の検討 | [GitHub](theme_A/theme_A.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_A/theme_A.ipynb) |
 | B | ニューラルネットワークの重みにおけるベクトル量子化とスカラー量子化の効率比較、および融合手法の検討 | [GitHub](theme_B/theme_B.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_B/theme_B.ipynb) |
-<!-- | C | 量子化の前処理としてのアダマール変換の効果 | [GitHub](theme_C/theme_C.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_C/theme_C.ipynb) | -->
 | C | 量子化と多層分解を同時に行う場合の、深さとビット幅の最適比 | [GitHub](theme_C/theme_C.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_C/theme_C.ipynb) |
 | D | 量子化と枝刈りを同時に行う場合の、ビット幅とスパーシティの最適比 | [GitHub](theme_D/theme_D.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_D/theme_D.ipynb) |
 | E | Looped LLMにおける重み量子化ビット幅と、精度・モデルサイズのトレードオフ | [GitHub](theme_E/theme_E.ipynb) / [Colab](https://colab.research.google.com/github/ArtIC-TITECH/b3-proj-2026/blob/main/theme_E/theme_E.ipynb) |
